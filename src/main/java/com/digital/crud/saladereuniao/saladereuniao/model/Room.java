@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+
 @Entity
 @Table(name="meetingroom")
 
@@ -54,7 +56,7 @@ public class Room {
         this.date = date;
     }
 
-    @Column(name="startHour", nullable = false)
+    @Column(name="startHour", nullable = true)
     public String getStartHour() {
         return startHour;
     }
@@ -72,7 +74,7 @@ public class Room {
 
     @Override
     public String toString(){
-        return "Room [id+" + id + ",name="+name+ ",startHour=" +startHour+ ",endHour="+endHour+"]";
+        return "Room [id+" + id + ",name="+name+ ",date="+date+ ",startHour=" +startHour+ ",endHour="+endHour+"]";
     }
 
 }
